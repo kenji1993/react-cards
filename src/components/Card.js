@@ -1,12 +1,11 @@
 import React from 'react'
-import  cassette  from '../assets/img/cassette-recortado.jpg'
 
-const Card = () => {
+const Card = ({ title, image, url }) => {
     return (
         <div className="card text-center bg-dark">
-            <img src={cassette} alt="cassette"/>
+            <img src={image} alt={image}/>
             <div className="card-body text-light">
-                <h4 className="card-title"> Card </h4>
+                <h4 className="card-title"> {title} </h4>
                     <p className="card-text text-secondary">
                         Duis sunt est reprehenderit deserunt est 
                         deserunt cillum adipisicing duis. Sunt anim 
@@ -14,8 +13,8 @@ const Card = () => {
                         excepteur duis mollit ex aute amet elit cupidatat 
                         velit nulla sunt officia.
                     </p>
-                    <a href="#" className="btn btn-outline-secondary">
-                        Go to this website
+                    <a href={url} className="btn btn-outline-secondary" target="_blank">
+                        Ir al sitio
                     </a>
             </div>
         </div>
