@@ -1,17 +1,16 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Card = ({ title, image, url }) => {
+const Card = ({ title, image, url, text }) => {
     return (
         <div className="card text-center bg-dark">
-            <img src={image} alt={image}/>
+            <div className="overflow">
+                <img src={image} alt={image} className="card-img-top"/>
+            </div>
             <div className="card-body text-light">
                 <h4 className="card-title"> {title} </h4>
                     <p className="card-text text-secondary">
-                        Duis sunt est reprehenderit deserunt est 
-                        deserunt cillum adipisicing duis. Sunt anim 
-                        quis occaecat eiusmod cupidatat in sunt. Duis 
-                        excepteur duis mollit ex aute amet elit cupidatat 
-                        velit nulla sunt officia.
+                       {text}
                     </p>
                     <a href={url} className="btn btn-outline-secondary" target="_blank">
                         Ir al sitio
@@ -19,6 +18,13 @@ const Card = ({ title, image, url }) => {
             </div>
         </div>
     )
+}
+
+Card.propTypes = {
+    title: PropTypes.string.isRequired,
+    url: PropTypes.string,
+    image: PropTypes.string,
+    text: PropTypes.string,
 }
 
 export default Card
