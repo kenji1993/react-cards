@@ -1,5 +1,7 @@
 import './App.css';
 import Cards from './components/Cards';
+import 'animate.css/animate.min.css'
+
 
 function App() {
   return (

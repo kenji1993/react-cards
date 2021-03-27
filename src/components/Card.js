@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 const Card = ({ title, image, url, text }) => {
     return (
-        <div className="card text-center bg-dark">
+        <div className="card text-center bg-dark animate__animated animate__bounceInUp">
             <div className="overflow">
                 <img src={image} alt={image} className="card-img-top"/>
             </div>
